@@ -1,8 +1,8 @@
 -- Creating database
-CREATE DATABASE IF NOT EXISTS Lucky_Shrub; 
+CREATE DATABASE IF NOT EXISTS Personal_Details; 
 
 -- Using database
-USE Lucky_Shrub; 
+USE Personal_Details; 
 
  -- Creating Tables
 CREATE TABLE Clients (ClientID VARCHAR(10) primary key, FullName VARCHAR(100), ContactNumber INT, AddressID INT); 
@@ -26,12 +26,12 @@ CREATE TABLE Notifications (NotificationID INT AUTO_INCREMENT PRIMARY KEY, Notif
  
  -- Inserting Values into the tables
 INSERT INTO Employees (EmployeeID, FullName, JobTitle, Department, AddressID) VALUES    
-(1, "Seamus Hogan", "Manager", "Management", 7),    
-(2, "Thomas Eriksson", "Assistant ", "Sales", 8),   
-(3, "Simon Tolo", "Head Chef", "Management", 9),  
-(4, "Francesca Soffia", "Assistant  ", "Human Resources", 10),   
-(5, "Emily Sierra", "Accountant", "Finance", 11),    
-(6, "Greta Galkina", "Accountant", "Finance", 12);  
+(1, "Hulk Hogan", "Manager", "Management", 7),    
+(2, "Sony", "Assistant ", "Sales", 8),   
+(3, "Brandon", "Head Chef", "Management", 9),  
+(4, "Chandler", "Assistant  ", "Human Resources", 10),   
+(5, "Gracia", "Accountant", "Finance", 11),    
+(6, "Monica", "Accountant", "Finance", 12);  
   
   
 INSERT INTO Activity(ActivityID, Properties) VALUES   
@@ -41,12 +41,12 @@ INSERT INTO Activity(ActivityID, Properties) VALUES
   
 
 INSERT INTO Clients(ClientID, FullName, ContactNumber, AddressID) VALUES   
-("Cl1", "Takashi Ito", 351786345, 1),   
-("Cl2", "Jane Murphy", 351567243, 2),   
-("Cl3", "Laurina Delgado", 351342597, 3),   
-("Cl4", "Benjamin Clauss", 351342509, 4),   
-("Cl5", "Altay Ayhan", 351208983, 5),   
-("Cl6", "Greta Galkina", 351298755, 6);     
+("Cl1", "Undertaker", 351786345, 1),   
+("Cl2", "Roman Reigns", 351567243, 2),   
+("Cl3", "Alberto", 351342597, 3),   
+("Cl4", "klaus", 351342509, 4),   
+("Cl5", "Nexus", 351208983, 5),   
+("Cl6", "Greta", 351298755, 6);     
   
   
 INSERT INTO Products (ProductID, ProductName, BuyPrice, SellPrice, NumberOfITems) VALUES   
