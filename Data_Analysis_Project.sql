@@ -163,14 +163,9 @@ SELECT * FROM P2_Sales_2021
 UNION
 SELECT * FROM P2_Sales_2022;
 
--- Task 6 Solution
-SELECT Activity.Properties ->>'$.ClientID' 
-AS ClientID, Activity.Properties ->>'$.ProductID' 
-AS ProductID, Clients.FullName, Clients.ContactNumber 
-FROM Clients RIGHT JOIN Activity 
-ON Clients.ClientID = Activity.Properties ->>'$.ClientID';
 
--- Task 7 Solution
+
+-- Task 6 Solution
 -- Use the following code to create the procedure:
 DELIMITER //
 CREATE PROCEDURE GetProfit(IN product_id VARCHAR(10), IN YearInput INT)
@@ -188,7 +183,7 @@ DELIMITER ;
 -- Use the following code to call the procedure:
 CALL GetProfit('P1', 2020);
 
--- Task 8 solution
+-- Task 7 solution
 CREATE VIEW DataSummary AS SELECT Clients.FullName, Clients.ContactNumber, Addresses.County, Products.ProductName, Orders.ProductID, Orders.Cost, Orders.Date 
 FROM Clients INNER JOIN Addresses 
 ON Clients.AddressID = Addresses.AddressID INNER JOIN Orders ON Clients.ClientID = Orders.ClientID INNER JOIN Products ON Orders.ProductID = Products.ProductID 
